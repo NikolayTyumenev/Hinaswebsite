@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hina's Journal - Memories</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/date.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/memories.js"></script>
+    <script src="js/diary-nav-fix.js"></script>
+    <script src="js/auto-save.js"></script>
+    <script src="js/journal-sync.js"></script>
+</head>
+<body>
+    <div class="notebook-page">
+        <!-- Yarn Ball Navigation for Mobile -->
+        <div class="yarn-ball" id="yarnBall">
+            <div class="yarn-strands">
+                <div class="strand strand-1"></div>
+                <div class="strand strand-2"></div>
+                <div class="strand strand-3"></div>
+            </div>
+        </div>
+
+        <!-- Navigation Bookmarks -->
+        <nav class="bookmark-nav" id="mainNav">
+            <div class="bookmark-container">
+                <a href="index.html" class="bookmark periwinkle">
+                    <span class="bookmark-text">Home</span>
+                    <div class="cat-silhouette fluffy-cat"></div>
+                </a>
+                <a href="gallery.html" class="bookmark baby-blue">
+                    <span class="bookmark-text">Gallery</span>
+                    <div class="cat-silhouette calico-cat"></div>
+                </a>
+                <a href="thoughts.html" class="bookmark baby-pink">
+                    <span class="bookmark-text">Thoughts</span>
+                </a>
+                <a href="dreams.html" class="bookmark light-yellow">
+                    <span class="bookmark-text">Dreams</span>
+                </a>
+                <a href="memories.html" class="bookmark current-page periwinkle-light">
+                    <span class="bookmark-text">Memories</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Yarn Trail (appears when menu opens) -->
+        <div class="yarn-trail" id="yarnTrail"></div>
+
+        <main class="journal-content">
+            <header class="page-header">
+                <h1 class="journal-title">Cherished Memories</h1>
+                <div class="date-line">
+                    <span id="currentDate"></span>
+                </div>
+            </header>
+
+            <section class="memories-section">
+                <div class="memory-timeline">
+                    <div class="timeline-yarn"></div>
+                    
+                    <div class="memory-card year-2024">
+                        <div class="memory-year">2024</div>
+                        <div class="memory-content">
+                            <h3>The Year of New Beginnings</h3>
+                            <p>Started this journal, adopted my second cat, discovered my love for periwinkle...</p>
+                            <div class="memory-bookmark"></div>
+                        </div>
+                    </div>
+
+                    <div class="memory-card year-2023">
+                        <div class="memory-year">2023</div>
+                        <div class="memory-content">
+                            <h3>Adventures and Growth</h3>
+                            <p>Learned to knit, read 50 books, created my first garden...</p>
+                            <div class="memory-bookmark"></div>
+                        </div>
+                    </div>
+
+                    <div class="memory-card year-2022">
+                        <div class="memory-year">2022</div>
+                        <div class="memory-content">
+                            <h3>Simple Joys</h3>
+                            <p>First cat adoption, cozy reading nooks, Sunday tea rituals...</p>
+                            <div class="memory-bookmark"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="memory-scrapbook">
+                    <h2>Memory Scrapbook</h2>
+                    <div class="scrapbook-items">
+                        <div class="scrapbook-item">
+                            <div class="item-icon book-icon"></div>
+                            <p>First edition of my favorite book</p>
+                        </div>
+                        <div class="scrapbook-item">
+                            <div class="item-icon yarn-icon"></div>
+                            <p>My first knitting project</p>
+                        </div>
+                        <div class="scrapbook-item">
+                            <div class="item-icon cat-icon"></div>
+                            <p>The day I met my cats</p>
+                        </div>
+                        <div class="scrapbook-item">
+                            <div class="item-icon flower-icon"></div>
+                            <p>Periwinkle flowers from the garden</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="memory-jar">
+                    <div class="jar-container">
+                        <div class="jar-body">
+                            <div class="memory-note note-1">Happy moment</div>
+                            <div class="memory-note note-2">Special day</div>
+                            <div class="memory-note note-3">Grateful for...</div>
+                            <div class="memory-note note-4">Achievement</div>
+                            <div class="memory-note note-5">Beautiful sight</div>
+                        </div>
+                        <div class="jar-lid"></div>
+                    </div>
+                    <p class="jar-label">Memory Jar - Click to add a memory</p>
+                </div>
+
+                <div class="memory-cats">
+                    <div class="remembering-cat fluffy-black"></div>
+                    <div class="nostalgic-cat calico"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Floating Memory Elements -->
+        <div class="floating-memories">
+            <div class="floating-memory" style="top: 15%; right: 10%;">📚</div>
+            <div class="floating-memory" style="top: 45%; left: 5%;">🧶</div>
+            <div class="floating-memory" style="top: 75%; right: 15%;">🐱</div>
+        </div>
+    </div>
+</body>
+</html>

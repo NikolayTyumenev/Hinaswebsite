@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hina's Journal - Gallery</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/date.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/diary-nav-fix.js"></script>
+    <script src="js/auto-save.js"></script>
+    <script src="js/journal-sync.js"></script>
+</head>
+<body>
+    <div class="notebook-page">
+        <!-- Yarn Ball Navigation for Mobile -->
+        <div class="yarn-ball" id="yarnBall">
+            <div class="yarn-strands">
+                <div class="strand strand-1"></div>
+                <div class="strand strand-2"></div>
+                <div class="strand strand-3"></div>
+            </div>
+        </div>
+
+        <!-- Navigation Bookmarks -->
+        <nav class="bookmark-nav" id="mainNav">
+            <div class="bookmark-container">
+                <a href="index.html" class="bookmark periwinkle">
+                    <span class="bookmark-text">Home</span>
+                    <div class="cat-silhouette fluffy-cat"></div>
+                </a>
+                <a href="gallery.html" class="bookmark current-page baby-blue">
+                    <span class="bookmark-text">Gallery</span>
+                    <div class="cat-silhouette calico-cat"></div>
+                </a>
+                <a href="thoughts.html" class="bookmark baby-pink">
+                    <span class="bookmark-text">Thoughts</span>
+                </a>
+                <a href="dreams.html" class="bookmark light-yellow">
+                    <span class="bookmark-text">Dreams</span>
+                </a>
+                <a href="memories.html" class="bookmark periwinkle-light">
+                    <span class="bookmark-text">Memories</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Yarn Trail (appears when menu opens) -->
+        <div class="yarn-trail" id="yarnTrail"></div>
+
+        <main class="journal-content">
+            <header class="page-header">
+                <h1 class="journal-title">Memory Gallery</h1>
+                <div class="date-line">
+                    <span id="currentDate"></span>
+                </div>
+            </header>
+
+            <section class="gallery-section">
+                <div class="gallery-intro">
+                    <p>A collection of moments frozen in time, each picture telling its own story...</p>
+                </div>
+
+                <div class="photo-gallery" id="photoGallery">
+                    <div class="photo-frame periwinkle-frame">
+                        <div class="photo-placeholder" style="position: relative;">
+                            <div class="photo-date">Spring 2024</div>
+                            <div class="photo-caption">A perfect day with my furry companions</div>
+                        </div>
+                        <div class="frame-decoration">
+                            <div class="yarn-accent pink"></div>
+                        </div>
+                    </div>
+
+                    <div class="photo-frame baby-blue-frame">
+                        <div class="photo-placeholder" style="position: relative;">
+                            <div class="photo-date">Summer 2024</div>
+                            <div class="photo-caption">Reading in the garden</div>
+                        </div>
+                        <div class="frame-decoration">
+                            <div class="yarn-accent yellow"></div>
+                        </div>
+                    </div>
+
+                    <div class="photo-frame baby-pink-frame">
+                        <div class="photo-placeholder" style="position: relative;">
+                            <div class="photo-date">Autumn 2024</div>
+                            <div class="photo-caption">Cozy afternoons with tea and books</div>
+                        </div>
+                        <div class="frame-decoration">
+                            <div class="yarn-accent periwinkle"></div>
+                        </div>
+                    </div>
+
+                    <div class="photo-frame light-yellow-frame">
+                        <div class="photo-placeholder" style="position: relative;">
+                            <div class="photo-date">Winter 2024</div>
+                            <div class="photo-caption">Knitting by the fireplace</div>
+                        </div>
+                        <div class="frame-decoration">
+                            <div class="yarn-accent baby-blue"></div>
+                        </div>
+                    </div>
+
+                    <div class="photo-frame periwinkle-frame">
+                        <div class="photo-placeholder" style="position: relative;">
+                            <div class="photo-date">Special Moments</div>
+                            <div class="photo-caption">Adventures with loved ones</div>
+                        </div>
+                        <div class="frame-decoration">
+                            <div class="yarn-accent pink"></div>
+                        </div>
+                    </div>
+
+                    <div class="photo-frame baby-blue-frame">
+                        <div class="photo-placeholder" style="position: relative;">
+                            <div class="photo-date">Cat Chronicles</div>
+                            <div class="photo-caption">Daily life with my feline friends</div>
+                        </div>
+                        <div class="frame-decoration">
+                            <div class="yarn-accent yellow"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="add-photo-container" id="addPhotoContainer" style="display: none;">
+                    <button class="add-photo-btn" id="addPhotoBtn">
+                        <span>+</span>
+                        Add New Photo
+                    </button>
+                </div>
+
+                <!-- Decorative yarn connecting frames -->
+                <div class="gallery-yarn-decoration">
+                    <div class="connecting-yarn pink-yarn"></div>
+                    <div class="connecting-yarn yellow-yarn"></div>
+                </div>
+
+                <div class="cat-decorations">
+                    <div class="gallery-cat fluffy-black"></div>
+                    <div class="gallery-cat calico"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Floating Elements -->
+        <div class="floating-yarn-ball floating-element" style="top: 30%; right: 5%;"></div>
+        <div class="floating-bookmark floating-element" style="top: 70%; left: 10%;"></div>
+    </div>
+</body>
+</html>

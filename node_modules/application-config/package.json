@@ -1,0 +1,27 @@
+{
+  "name": "application-config",
+  "version": "3.0.0",
+  "license": "MIT",
+  "repository": "LinusU/node-application-config",
+  "type": "module",
+  "exports": "./index.js",
+  "files": [
+    "index.d.ts",
+    "index.js"
+  ],
+  "scripts": {
+    "test": "standard && mocha"
+  },
+  "dependencies": {
+    "application-config-path": "^1.0.0",
+    "load-json-file": "^7.0.1",
+    "write-json-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "standard": "^17.0.0"
+  },
+  "engines": {
+    "node": "^14.18.0 || ^16.14.0 || >=18.0.0"
+  }
+}

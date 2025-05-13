@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hina's Journal - Dreams</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/date.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/dreams.js"></script>
+    <script src="js/diary-nav-fix.js"></script>
+    <script src="js/auto-save.js"></script>
+    <script src="js/journal-sync.js"></script>
+</head>
+<body>
+    <div class="notebook-page">
+        <!-- Yarn Ball Navigation for Mobile -->
+        <div class="yarn-ball" id="yarnBall">
+            <div class="yarn-strands">
+                <div class="strand strand-1"></div>
+                <div class="strand strand-2"></div>
+                <div class="strand strand-3"></div>
+            </div>
+        </div>
+
+        <!-- Navigation Bookmarks -->
+        <nav class="bookmark-nav" id="mainNav">
+            <div class="bookmark-container">
+                <a href="index.html" class="bookmark periwinkle">
+                    <span class="bookmark-text">Home</span>
+                    <div class="cat-silhouette fluffy-cat"></div>
+                </a>
+                <a href="gallery.html" class="bookmark baby-blue">
+                    <span class="bookmark-text">Gallery</span>
+                    <div class="cat-silhouette calico-cat"></div>
+                </a>
+                <a href="thoughts.html" class="bookmark baby-pink">
+                    <span class="bookmark-text">Thoughts</span>
+                </a>
+                <a href="dreams.html" class="bookmark current-page light-yellow">
+                    <span class="bookmark-text">Dreams</span>
+                </a>
+                <a href="memories.html" class="bookmark periwinkle-light">
+                    <span class="bookmark-text">Memories</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Yarn Trail (appears when menu opens) -->
+        <div class="yarn-trail" id="yarnTrail"></div>
+
+        <main class="journal-content">
+            <header class="page-header">
+                <h1 class="journal-title">Dream Journal</h1>
+                <div class="date-line">
+                    <span id="currentDate"></span>
+                </div>
+            </header>
+
+            <section class="dreams-section">
+                <div class="dream-cloud-container">
+                    <div class="dream-cloud dream-1">
+                        <h3>The Library in the Clouds</h3>
+                        <p>I walked through a library where books floated like clouds, and cats guided readers to their perfect story...</p>
+                    </div>
+
+                    <div class="dream-cloud dream-2">
+                        <h3>Yarn Ball Universe</h3>
+                        <p>The universe was a giant ball of yarn, with each thread representing a life story, all interconnected...</p>
+                    </div>
+
+                    <div class="dream-cloud dream-3">
+                        <h3>Periwinkle Garden</h3>
+                        <p>A garden where everything was in shades of periwinkle, and butterflies left trails of golden yarn...</p>
+                    </div>
+                </div>
+
+                <div class="dream-catcher">
+                    <div class="dream-catcher-web">
+                        <div class="web-ring outer"></div>
+                        <div class="web-ring middle"></div>
+                        <div class="web-ring inner"></div>
+                        <div class="web-threads"></div>
+                    </div>
+                    <div class="dream-catcher-feathers">
+                        <div class="feather pink"></div>
+                        <div class="feather yellow"></div>
+                        <div class="feather periwinkle"></div>
+                    </div>
+                </div>
+
+                <div class="new-dream-box">
+                    <h3>Record a New Dream</h3>
+                    <input type="text" placeholder="Dream Title" class="dream-title-input">
+                    <textarea placeholder="Describe your dream..." class="dream-input"></textarea>
+                    <button class="add-dream-btn">Save Dream</button>
+                </div>
+
+                <div class="sleeping-cats">
+                    <div class="sleeping-cat fluffy-black-cat">
+                        <div class="dream-bubble">
+                            <span>💭</span>
+                        </div>
+                    </div>
+                    <div class="sleeping-cat calico-cat">
+                        <div class="dream-bubble">
+                            <span>✨</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="starry-background">
+                    <div class="star" style="top: 10%; left: 15%;"></div>
+                    <div class="star" style="top: 20%; left: 80%;"></div>
+                    <div class="star" style="top: 40%; left: 50%;"></div>
+                    <div class="star" style="top: 60%; left: 30%;"></div>
+                    <div class="star" style="top: 80%; left: 70%;"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

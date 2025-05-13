@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hina's Journal - Thoughts</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/date.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/thoughts.js"></script>
+    <script src="js/diary-nav-fix.js"></script>
+    <script src="js/auto-save.js"></script>
+    <script src="js/journal-sync.js"></script>
+</head>
+<body>
+    <div class="notebook-page">
+        <!-- Yarn Ball Navigation for Mobile -->
+        <div class="yarn-ball" id="yarnBall">
+            <div class="yarn-strands">
+                <div class="strand strand-1"></div>
+                <div class="strand strand-2"></div>
+                <div class="strand strand-3"></div>
+            </div>
+        </div>
+
+        <!-- Navigation Bookmarks -->
+        <nav class="bookmark-nav" id="mainNav">
+            <div class="bookmark-container">
+                <a href="index.html" class="bookmark periwinkle">
+                    <span class="bookmark-text">Home</span>
+                    <div class="cat-silhouette fluffy-cat"></div>
+                </a>
+                <a href="gallery.html" class="bookmark baby-blue">
+                    <span class="bookmark-text">Gallery</span>
+                    <div class="cat-silhouette calico-cat"></div>
+                </a>
+                <a href="thoughts.html" class="bookmark current-page baby-pink">
+                    <span class="bookmark-text">Thoughts</span>
+                </a>
+                <a href="dreams.html" class="bookmark light-yellow">
+                    <span class="bookmark-text">Dreams</span>
+                </a>
+                <a href="memories.html" class="bookmark periwinkle-light">
+                    <span class="bookmark-text">Memories</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Yarn Trail (appears when menu opens) -->
+        <div class="yarn-trail" id="yarnTrail"></div>
+
+        <main class="journal-content">
+            <header class="page-header">
+                <h1 class="journal-title">Daily Thoughts</h1>
+                <div class="date-line">
+                    <span id="currentDate"></span>
+                </div>
+            </header>
+
+            <section class="thoughts-section">
+                <div class="thought-entry">
+                    <div class="entry-date">Today</div>
+                    <p>Sometimes I wonder if cats can read our thoughts. The way they look at us with those knowing eyes...</p>
+                    <div class="yarn-divider baby-pink"></div>
+                </div>
+
+                <div class="thought-entry">
+                    <div class="entry-date">Yesterday</div>
+                    <p>Found an old bookmark between the pages of my favorite novel. It reminded me that some things are worth keeping forever.</p>
+                    <div class="yarn-divider light-yellow"></div>
+                </div>
+
+                <div class="thought-entry">
+                    <div class="entry-date">Last Week</div>
+                    <p>The periwinkle sky at sunset looked like watercolor paint spilled across canvas. Nature is the best artist.</p>
+                    <div class="yarn-divider periwinkle"></div>
+                </div>
+
+                <div class="new-thought-box">
+                    <h3>Add a New Thought</h3>
+                    <textarea placeholder="What's on your mind today?" class="thought-input"></textarea>
+                    <button class="add-thought-btn">Save Thought</button>
+                </div>
+
+                <div class="floating-thoughts">
+                    <div class="floating-thought" style="top: 10%; left: 5%;">
+                        <span>Books are doors to other worlds</span>
+                    </div>
+                    <div class="floating-thought" style="top: 30%; right: 10%;">
+                        <span>Cats know the secret to happiness</span>
+                    </div>
+                    <div class="floating-thought" style="top: 50%; left: 15%;">
+                        <span>Every stitch tells a story</span>
+                    </div>
+                </div>
+
+                <div class="thought-cats">
+                    <div class="thinking-cat fluffy-black"></div>
+                    <div class="dreaming-cat calico"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Decorative Yarn Elements -->
+        <div class="page-yarn-decoration">
+            <div class="curly-yarn pink"></div>
+            <div class="curly-yarn yellow"></div>
+        </div>
+    </div>
+</body>
+</html>

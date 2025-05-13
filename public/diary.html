@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hina's Journal - Diary</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/date.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/diary.js"></script>
+    <script src="js/diary-nav-fix.js"></script>
+    <script src="js/auto-save.js"></script>
+    <script src="journal-sync.js"></script>
+</head>
+</head>
+<body>
+    <div class="notebook-page">
+        <!-- Yarn Ball Navigation for Mobile -->
+        <div class="yarn-ball" id="yarnBall">
+            <div class="yarn-strands">
+                <div class="strand strand-1"></div>
+                <div class="strand strand-2"></div>
+                <div class="strand strand-3"></div>
+            </div>
+        </div>
+
+        <!-- Navigation Bookmarks -->
+        <nav class="bookmark-nav" id="mainNav">
+            <div class="bookmark-container">
+                <a href="index.html" class="bookmark periwinkle">
+                    <span class="bookmark-text">Home</span>
+                    <div class="cat-silhouette fluffy-cat"></div>
+                </a>
+                <a href="gallery.html" class="bookmark baby-blue">
+                    <span class="bookmark-text">Gallery</span>
+                    <div class="cat-silhouette calico-cat"></div>
+                </a>
+                <a href="thoughts.html" class="bookmark baby-pink">
+                    <span class="bookmark-text">Thoughts</span>
+                </a>
+                <a href="dreams.html" class="bookmark light-yellow">
+                    <span class="bookmark-text">Dreams</span>
+                </a>
+                <a href="memories.html" class="bookmark periwinkle-light">
+                    <span class="bookmark-text">Memories</span>
+                </a>
+                <a href="diary.html" class="bookmark current-page baby-pink">
+                    <span class="bookmark-text">Diary</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Yarn Trail (appears when menu opens) -->
+        <div class="yarn-trail" id="yarnTrail"></div>
+
+        <main class="journal-content">
+            <header class="page-header">
+                <h1 class="journal-title">My Private Diary</h1>
+                <div class="date-line">
+                    <span id="currentDate"></span>
+                </div>
+            </header>
+
+            <section class="diary-section">
+                <div class="diary-entries" id="diaryEntries">
+                    <!-- Existing diary entries will be loaded here -->
+                </div>
+
+                <div class="new-diary-entry" id="newDiaryEntry">
+                    <h3>Add New Diary Entry</h3>
+                    <input type="date" id="diaryDate" class="diary-date-input">
+                    <input type="text" id="diaryTitle" placeholder="Entry Title" class="diary-title-input">
+                    <textarea id="diaryContent" placeholder="Dear Diary..." class="diary-content-input"></textarea>
+                    <div class="diary-mood">
+                        <label>Today's Mood:</label>
+                        <select id="diaryMood" class="mood-selector">
+                            <option value="happy">😊 Happy</option>
+                            <option value="peaceful">😌 Peaceful</option>
+                            <option value="excited">🤗 Excited</option>
+                            <option value="thoughtful">🤔 Thoughtful</option>
+                            <option value="grateful">🙏 Grateful</option>
+                            <option value="tired">😴 Tired</option>
+                            <option value="anxious">😟 Anxious</option>
+                            <option value="sad">😢 Sad</option>
+                        </select>
+                    </div>
+                    <button id="addDiaryEntry" class="add-diary-btn">Save Entry</button>
+                </div>
+
+                <div class="diary-lock" id="diaryLock">
+                    <div class="lock-icon">🔒</div>
+                    <p>This diary is locked. Only Hina can add entries.</p>
+                </div>
+            </section>
+
+            <div class="diary-decorations">
+                <div class="diary-pen"></div>
+                <div class="diary-cat fluffy-black-cat"></div>
+                <div class="diary-yarn pink"></div>
+                <div class="diary-yarn yellow"></div>
+            </div>
+        </main>
+
+        <!-- Floating Elements -->
+        <div class="floating-heart" style="top: 15%; right: 10%;">💜</div>
+        <div class="floating-star" style="top: 70%; left: 5%;">⭐</div>
+    </div>
+</body>
+</html>

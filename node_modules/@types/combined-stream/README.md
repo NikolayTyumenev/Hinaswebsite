@@ -1,0 +1,70 @@
+# Installation
+> `npm install --save @types/combined-stream`
+
+# Summary
+This package contains type definitions for combined-stream (https://github.com/felixge/node-combined-stream).
+
+# Details
+Files were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/combined-stream.
+## [index.d.ts](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/combined-stream/index.d.ts)
+````ts
+/// <reference types="node" />
+
+import { Stream } from "stream";
+
+type Appendable = NodeJS.ReadableStream | NodeJS.WritableStream | Buffer | string | NextFunction;
+type NextFunction = (next: (stream: Appendable) => any) => any;
+
+interface Options {
+    maxDataSize?: number | undefined;
+    pauseStreams?: boolean | undefined;
+}
+
+declare class CombinedStream extends Stream implements Options {
+    readonly writable: boolean;
+    readonly readable: boolean;
+    readonly dataSize: number;
+    maxDataSize: number;
+    pauseStreams: boolean;
+    append(stream: Appendable): this;
+    write(data: any): void;
+    pause(): void;
+    resume(): void;
+    end(): void;
+    destroy(): void;
+
+    // private properties
+    _released: boolean;
+    // @TODO it should be a type of Array<'delayed-stream' instance | Buffer | string>
+    _streams: Array<Stream | Buffer | string>;
+    _currentStream: Stream | Buffer | string | null;
+    _getNext(): void;
+    _pipeNext(): void;
+    _handleErrors(stream: NodeJS.EventEmitter): void;
+    _reset(): void;
+    _checkDataSize(): void;
+    _updateDataSize(): void;
+    _emitError(error: Error): void;
+
+    // events
+    on(event: "close" | "end" | "resume" | "pause", cb: () => void): this;
+    on(event: "error", cb: (err: Error) => void): this;
+    on(event: "data", cb: (data: any) => void): this;
+    once(event: "close" | "end" | "resume" | "pause", cb: () => void): this;
+    once(event: "error", cb: (err: Error) => void): this;
+    once(event: "data", cb: (data: any) => void): this;
+
+    static create(options?: Options): CombinedStream;
+    static isStreamLike(stream: any): stream is Stream;
+}
+
+export = CombinedStream;
+
+````
+
+### Additional Details
+ * Last updated: Mon, 06 Nov 2023 22:41:05 GMT
+ * Dependencies: [@types/node](https://npmjs.com/package/@types/node)
+
+# Credits
+These definitions were written by [Felix Geisendörfer](https://github.com/felixge), [Tomek Łaziuk](https://github.com/tlaziuk), and [Kon Pik](https://github.com/konpikwastaken).

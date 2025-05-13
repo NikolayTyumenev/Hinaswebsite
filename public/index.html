@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hina's Journal - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/date.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/diary-nav-fix.js"></script>
+    <script src="js/auto-save.js"></script>
+    <script src="js/journal-sync.js"></script>
+</head>
+<body>
+    <div class="notebook-page">
+        <!-- Yarn Ball Navigation for Mobile -->
+        <div class="yarn-ball" id="yarnBall">
+            <div class="yarn-strands">
+                <div class="strand strand-1"></div>
+                <div class="strand strand-2"></div>
+                <div class="strand strand-3"></div>
+            </div>
+        </div>
+
+        <!-- Navigation Bookmarks -->
+        <nav class="bookmark-nav" id="mainNav">
+            <div class="bookmark-container">
+                <a href="index.html" class="bookmark current-page periwinkle">
+                    <span class="bookmark-text">Home</span>
+                    <div class="cat-silhouette fluffy-cat"></div>
+                </a>
+                <a href="gallery.html" class="bookmark baby-blue">
+                    <span class="bookmark-text">Gallery</span>
+                    <div class="cat-silhouette calico-cat"></div>
+                </a>
+                <a href="thoughts.html" class="bookmark baby-pink">
+                    <span class="bookmark-text">Thoughts</span>
+                </a>
+                <a href="dreams.html" class="bookmark light-yellow">
+                    <span class="bookmark-text">Dreams</span>
+                </a>
+                <a href="memories.html" class="bookmark periwinkle-light">
+                    <span class="bookmark-text">Memories</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Yarn Trail (appears when menu opens) -->
+        <div class="yarn-trail" id="yarnTrail"></div>
+
+        <main class="journal-content">
+            <header class="page-header">
+                <h1 class="journal-title">Hina Majboor's Journal</h1>
+                <div class="date-line">
+                    <span id="currentDate"></span>
+                </div>
+            </header>
+
+            <section class="journal-entry">
+                <p class="opening-quote">"Every page is a new beginning, every line a step in my journey."</p>
+                
+                <div class="welcome-section">
+                    <h2>Welcome to My Journal</h2>
+                    <p>This is my personal space where thoughts dance like yarn between my fingers, and memories curl up like my beloved cats on a sunny afternoon.</p>
+                    
+                    <div class="yarn-decoration">
+                        <div class="yarn-line pink"></div>
+                        <div class="yarn-line yellow"></div>
+                    </div>
+
+                    <p>Here, between these periwinkle-kissed pages, I capture the moments that make life beautiful. From daily musings to cherished dreams, each word is a thread in the tapestry of my story.</p>
+                </div>
+
+                <div class="book-quote">
+                    <div class="quote-marks">"</div>
+                    <p>A reader lives a thousand lives before he dies. The man who never reads lives only one.</p>
+                    <cite>- George R.R. Martin</cite>
+                </div>
+
+                <div class="cat-container">
+                    <div class="cat fluffy-black-cat"></div>
+                    <div class="cat calico-cat-sitting"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Floating Elements -->
+        <div class="floating-yarn-ball floating-element" style="top: 20%; left: 10%;"></div>
+        <div class="floating-bookmark floating-element" style="top: 60%; right: 15%;"></div>
+        <div class="pen-decoration"></div>
+    </div>
+</body>
+</html>

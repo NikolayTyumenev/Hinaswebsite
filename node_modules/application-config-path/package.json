@@ -1,0 +1,19 @@
+{
+  "name": "application-config-path",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Linus Unnebäck <linus@folkdatorn.se>",
+  "repository": "LinusU/node-application-config-path",
+  "type": "module",
+  "exports": "./index.js",
+  "scripts": {
+    "test": "standard && mocha"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "standard": "^17.0.0"
+  },
+  "engines": {
+    "node": "^14.18.0 || ^16.14.0 || >=18.0.0"
+  }
+}
