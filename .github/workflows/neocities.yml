@@ -1,9 +1,9 @@
-name: Deploy to neocities
+name: Deploy to Neocities
 
 on:
   push:
     branches:
-      - main  # or 'master' if that's your main branch name
+      - main  # or 'master' if that's your main branch
 
 jobs:
   deploy:
@@ -13,8 +13,8 @@ jobs:
         uses: actions/checkout@v3
       
       - name: Deploy to Neocities
-        uses: bcomnes/deploy-to-neocities@v1
+        uses: jonchang/deploy-neocities@v1
         with:
-          api_token: ${{ secrets.f5bb31bd07c558fdba6b2cdcc45d289d }}
-          cleanup: true  # Remove files that aren't in your build
-          dist_dir: public  # Your site is in the public folder
+          api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
+          cleanup: true
+          dir: public
